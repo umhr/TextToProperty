@@ -67,14 +67,6 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, onInit);
 			// entry point
 			
-			Style.embedFonts = false;
-			Style.fontName = "PF Ronda Seven";
-			Style.fontSize = 12;
-			
-			_inPutTextArea = new TextArea(this, 8, 8, '◆使い方\n複数行のテキストをここにコピペすると、\n"プロパティ"として使う際に便利かも。');
-			_inPutTextArea.width = stage.stageWidth - _inPutTextArea.x - 8;
-			_inPutTextArea.height = 200;
-			_inPutTextArea.addEventListener(Event.CHANGE, textArea_change);
 			
 			new Label(this, 8, 214, "Tab:");
 			_numericStepper = new NumericStepper(this, 38, 214, textArea_change);
@@ -86,6 +78,14 @@ package
 			_checkBox = new CheckBox(this, 280, 218, "local prop", textArea_change);
 			new PushButton(this, 357, 214, "Copy to Clipbord", onMouseClick);
 			
+			Style.embedFonts = false;
+			Style.fontName = "PF Ronda Seven";
+			Style.fontSize = 12;
+			
+			_inPutTextArea = new TextArea(this, 8, 8, '◆使い方\n複数行のテキストをここにコピペすると、下に整形して表示されるよ。\n"プロパティ"として使う際に便利かも。');
+			_inPutTextArea.width = stage.stageWidth - _inPutTextArea.x - 8;
+			_inPutTextArea.height = 200;
+			_inPutTextArea.addEventListener(Event.CHANGE, textArea_change);
 			_outPutTextArea = new TextArea(this, 8, 238, "");
 			_outPutTextArea.width = stage.stageWidth - _outPutTextArea.x - 8;
 			_outPutTextArea.height = stage.stageHeight - _outPutTextArea.y - 8;
