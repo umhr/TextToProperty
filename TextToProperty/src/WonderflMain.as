@@ -82,7 +82,7 @@ package
 			Style.fontName = "PF Ronda Seven";
 			Style.fontSize = 12;
 			
-			_inPutTextArea = new TextArea(this, 8, 8, '◆使い方\n複数行のテキストをここにコピペすると、下に整形して表示されるよ。\n"プロパティ"として使う際に便利かも。');
+			_inPutTextArea = new TextArea(this, 8, 8, '◆使い方\n複数行のテキストをここに"コピペ"すると、\n下に整形して表示されるよ。');
 			_inPutTextArea.width = stage.stageWidth - _inPutTextArea.x - 8;
 			_inPutTextArea.height = 200;
 			_inPutTextArea.addEventListener(Event.CHANGE, textArea_change);
